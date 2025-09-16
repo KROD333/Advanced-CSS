@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* For the small layout */
+body {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "a a"
+    "b b"
+    "c d"
+    "e e"
+    "f f";
+}
+
+/* The section wrappers for grid areas */
+.a { grid-area: a; background: rgba(255, 192, 203, 0.6); }
+.b { grid-area: b; background: rgba(255, 165, 0, 0.3); }
+.c { grid-area: c; background: rgba(255, 255, 0, 0.5); }
+.d { grid-area: d; background: rgba(173, 216, 230, 0.5); }
+.e { grid-area: e; background: rgba(176, 196, 222, 0.6); }
+.f { grid-area: f; background: rgba(216, 191, 216, 0.6); }
+
+
+section h2 {
+  margin: 0;
+  padding: 14px 12px;
+  font-weight: 600;
+}
+
+section {
+  display: grid;
+  border: 1px solid #ddd;
+}
+
+section p {
+  margin: 0 0 10px 0;
+  padding: 0 12px 12px 12px;
+}
+
+/* For the medium layout */
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "a a a"
+      "b b c"
+      "b b d"
+      "b b e"
+      "f f f";
+  }
+}
+
+/* For the large layout */
+@media (min-width: 1024px) {
+  body {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "a a a"
+      "b c d"
+      "b e e"
+      "f f f";
+  }
+}
+
